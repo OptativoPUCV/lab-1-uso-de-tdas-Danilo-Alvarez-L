@@ -18,3 +18,9 @@ exercises.c:50:7: error: implicit declaration of function 'pushback'; did you me
 cc1.exe: all warnings being treated as errors
 Compilation failed
 43ba3da
+Sun, Mar 23, 2025  2:41:36 PM: 
+ exercises.c | 25 +++++++++++++++++--------
+ 1 file changed, 17 insertions(+), 8 deletions(-)
+ tests:  3|2
+total_score: 40/70
+e130ed7
