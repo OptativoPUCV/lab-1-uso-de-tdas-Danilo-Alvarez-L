@@ -50,7 +50,7 @@ List* crea_lista() {
       {
          exit(EXIT_FAILURE);
       }
-      *elem = k;
+      *elem = i;
       pushBack(L, elem);
    }
    return L;
@@ -104,16 +104,19 @@ Puedes usar una pila auxiliar.
 void copia_pila(Stack* P1, Stack* P2) {
    Stack* auxiliar = create_stack();
 
-   while (top(P1) != NULL)
+   while (top(P1) != -1)
    {
-      push(auxiliar, pop(P1));
+      int* elemento = top(P1);
+      push(auxiliar, elemento);
+      pop(P1);
    }
 
-   while (top(auxiliar) != NULL)
+   while (top(auxiliar) != -1)
    {
-      void* dato = pop(auxiliar);
+      int* dato = top(auxiliar);
       push(P1, dato);
       push(P2, dato);
+      pop(auxiliar);
    }
 }
 

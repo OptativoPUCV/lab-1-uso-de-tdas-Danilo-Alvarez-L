@@ -43,3 +43,17 @@ exercises.c:53:15: error: 'k' undeclared (first use in this function)
 exercises.c:53:15: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 c311252
+Sun, Mar 23, 2025  3:22:54 PM: 
+ exercises.c | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'copia_pila':
+exercises.c:107:19: error: comparison between pointer and integer [-Werror]
+  107 |    while (top(P1) != -1)
+      |                   ^~
+exercises.c:114:25: error: comparison between pointer and integer [-Werror]
+  114 |    while (top(auxiliar) != -1)
+      |                         ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+265f65e
