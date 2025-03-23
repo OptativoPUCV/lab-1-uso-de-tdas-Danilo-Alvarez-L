@@ -32,3 +32,14 @@ Sun, Mar 23, 2025  3:04:39 PM:
  tests:  3|2
 total_score: 40/70
 7c46802
+Sun, Mar 23, 2025  3:15:16 PM: 
+ exercises.c | 27 ++++++++++++++++++++++-----
+ 1 file changed, 22 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'crea_lista':
+exercises.c:53:15: error: 'k' undeclared (first use in this function)
+   53 |       *elem = k;
+      |               ^
+exercises.c:53:15: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+c311252

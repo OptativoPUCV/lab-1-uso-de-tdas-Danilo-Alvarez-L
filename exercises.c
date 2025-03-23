@@ -43,11 +43,15 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
-   for (int k = 1 ; k <= 10 ; k++)
+   for (int i = 1 ; i <= 10 ; i++)
    {
-      int* num = (int *) malloc(sizeof(int));
-      *num = k;
-      pushBack(L, num);
+      int* elem = (int *) malloc(sizeof(int));
+      if (elem == NULL)
+      {
+         exit(EXIT_FAILURE);
+      }
+      *elem = k;
+      pushBack(L, elem);
    }
    return L;
 }
@@ -83,7 +87,7 @@ void eliminaElementos(List*L, int elem){
    {
       if (*elemento == elem )
       {
-         free(popCurrent(L));
+         popCurrent(L);
       }
       elemento = (int*)next(L);
    }
@@ -98,6 +102,19 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
+   Stack* auxiliar = create_stack();
+
+   while (top(P1) != NULL)
+   {
+      push(auxiliar, pop(P1));
+   }
+
+   while (top(auxiliar) != NULL)
+   {
+      void* dato = pop(auxiliar);
+      push(P1, dato);
+      push(P2, dato);
+   }
 }
 
 /*
@@ -110,4 +127,3 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    return 0;
 }
-
