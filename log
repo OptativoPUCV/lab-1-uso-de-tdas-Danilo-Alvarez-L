@@ -69,3 +69,19 @@ Sun, Mar 23, 2025  3:25:31 PM:
  tests:  4|1
 total_score: 50/70
 5c835ef
+Sun, Mar 23, 2025 10:19:03 PM: 
+ exercises.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:132:18: error: initialization of 'Stack *' {aka 'List *'} from incompatible pointer type 'Stack * (*)()' {aka 'List * (*)()'} [-Werror=incompatible-pointer-types]
+  132 |    Stack* Pila = create_stack;
+      |                  ^~~~~~~~~~~~
+exercises.c:142:18: error: 'pila' undeclared (first use in this function); did you mean 'Pila'?
+  142 |          if (top(pila) == NULL)
+      |                  ^~~~
+      |                  Pila
+exercises.c:142:18: note: each undeclared identifier is reported only once for each function it appears in
+cc1.exe: all warnings being treated as errors
+Compilation failed
+6bf272b
