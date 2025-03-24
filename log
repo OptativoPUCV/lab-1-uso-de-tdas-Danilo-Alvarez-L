@@ -96,3 +96,9 @@ exercises.c:132:18: error: initialization of 'Stack *' {aka 'List *'} from incom
 cc1.exe: all warnings being treated as errors
 Compilation failed
 54f075c
+Sun, Mar 23, 2025 10:27:28 PM: 
+ exercises.c | 10 ++--------
+ 1 file changed, 2 insertions(+), 8 deletions(-)
+ tests:  7|1
+total_score: 60/70
+7fcf7ac
