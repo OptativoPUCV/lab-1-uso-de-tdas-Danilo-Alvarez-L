@@ -182,3 +182,25 @@ stack.h:11:31: note: expected 'void *' but argument is of type 'char'
 cc1.exe: all warnings being treated as errors
 Compilation failed
 cf7bce9
+Sun, Mar 23, 2025 10:49:45 PM: 
+ exercises.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:140:27: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+  140 |          push(Pila, cadena[i]);
+      |                     ~~~~~~^~~
+      |                           |
+      |                           char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected 'void *' but argument is of type 'char'
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:145:24: error: initialization of 'char' from 'void *' makes integer from pointer without a cast [-Werror=int-conversion]
+  145 |          char cierra = top(Pila);
+      |                        ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+16d9d54
