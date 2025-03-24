@@ -147,9 +147,9 @@ int parentesisBalanceados(char *cadena) {
             return 0;
          }
 
-         char *cierra = (char*)top(Pila);
+         char cierra = *(char*)top(Pila);
 
-         if (( abre == ')' && *cierra != '(') || (abre == ']' && *cierra != '[') || (abre == '}' && *cierra != '{'))
+         if (( abre == ')' && cierra != '(') || (abre == ']' && cierra != '[') || (abre == '}' && cierra != '{'))
          {
             return 0;
          }
