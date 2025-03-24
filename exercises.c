@@ -142,7 +142,7 @@ int parentesisBalanceados(char *cadena) {
 
       else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}')
       {
-         char cierra = top(Pila);
+         char *cierra = (char*)top(Pila);
          if (top(Pila) == NULL)
          {
             return 0;
